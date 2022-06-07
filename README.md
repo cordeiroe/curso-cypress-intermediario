@@ -181,7 +181,7 @@ Cypress.Commands.add('logout', () => {
 
 ```
 
-3. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec cypress/integration/gui/logout.spec.js` para executar o novo teste em modo headless
+3. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec "cypress/integration/GUI/logout.spec.js"` para executar o novo teste em modo headless
 
 ### Testando criação de projeto
 
@@ -237,7 +237,7 @@ Cypress.Commands.add('gui_createProject', project => {
 
 ```
 
-4. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec cypress/integration/gui/createProject.spec.js` para executar o novo teste em modo headless
+4. Por fim, no terminal, na raiz do projeto, execute o comando `"npx cypress run --spec cypress/integration/GUI/createProject.spec.js"` para executar o novo teste em modo headless
 
 ## Aula 4 - Testes intermediários de GUI
 
@@ -303,7 +303,7 @@ Cypress.Commands.add('gui_createIssue', issue => {
 
 ```
 
-4. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec cypress/integration/gui/createIssue.spec.js` para executar o novo teste em modo headless
+4. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec "cypress/integration/GUI/createIssue.spec.js"` para executar o novo teste em modo headless
 
 ## Aula 5 - Testes de API
 
@@ -364,7 +364,7 @@ import './gui_commands'
 
 ```
 
-5. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec cypress/integration/api/createProject.spec.js` para executar o novo teste em modo headless.
+5. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec "cypress/integration/API/createProject.spec.js"` para executar o novo teste em modo headless.
 
 ### Testando criação de issue
 
@@ -424,12 +424,12 @@ Cypress.Commands.add('api_createIssue', issue => {
 
 ```
 
-3. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec cypress/integration/api/createIssue.spec.js` para executar o novo teste em modo headless.
+3. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec "cypress/integration/API/createIssue.spec.js"` para executar o novo teste em modo headless.
 
 ## Aula 6 - Otimizando os testes de GUI
 
 1. No arquivo `cypress/integration/gui/createIssue.spec.js`, substitua o comando `cy.gui_createProject(issue.project)` pelo seguinte `cy.api_createProject(issue.project)`. Desta forma, em vez de criarmos o projeto via GUI, o criamos via API, visto que tal opção é mais rápida, além de tornar o teste mais independente.
-2. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec cypress/integration/gui/createIssue.spec.js` para executar o teste refatorado em modo headless
+2. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec "cypress/integration/GUI/createIssue.spec.js"` para executar o teste refatorado em modo headless
 
 ## Aula 7 - Testes com muitas pré-condições
 
@@ -534,7 +534,7 @@ Cypress.Commands.add('gui_setLabelOnIssue', label => {
 
 ```
 
-4. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec cypress/integration/gui/setLabelOnIssue.spec.js` para executar o novo teste em modo headless
+4. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec "cypress/integration/GUI/setLabelOnIssue.spec.js"` para executar o novo teste em modo headless
 
 ### Testando adição de uma milestone à uma issue
 
@@ -638,7 +638,7 @@ Cypress.Commands.add('gui_setMilestoneOnIssue', milestone => {
 
 ```
 
-4. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec cypress/integration/gui/setMilestoneOnIssue.spec.js` para executar o novo teste em modo headless
+4. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec "cypress/integration/GUI/setMilestoneOnIssue.spec.js"` para executar o novo teste em modo headless
 
 ## Aula 8 - Executando comandos a nível de sistema
 
@@ -692,7 +692,7 @@ import './gui_commands'
 
 ```
 
-5. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec cypress/integration/cli/gitClone.spec.js` para executar o novo teste em modo headless
+5. Por fim, no terminal, na raiz do projeto, execute o comando `npx cypress run --spec "cypress/integration/cli/gitClone.spec.js"` para executar o novo teste em modo headless
 
 > Obs.: Na primeira vez que você executar o teste o seguinte será solicitado: `Are you sure you want to continue connecting (yes/no)?` Responda `yes` e pressione ENTER.
 
